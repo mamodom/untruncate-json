@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git://github.com/dphilipson/untruncate-json.git"
   },
+  "bin": {
+    "untruncate": "./dist/cjs/bin.js"
+  },
   "keywords": [
     "json",
     "untruncate",
@@ -35,7 +38,8 @@
     "lint-file": "tslint",
     "lint": "tslint --project .",
     "prepublishOnly": "yarn run test && yarn run build",
-    "test": "yarn run lint && tsc && yarn run jest"
+    "test": "yarn run lint && tsc && yarn run jest",
+    "prepare": "yarn build"
   },
   "husky": {
     "hooks": {
